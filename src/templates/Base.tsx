@@ -4,7 +4,7 @@ import { Footer } from './Footer';
 import { Hero } from './Hero';
 
 const Base = () => (
-  <div className="text-gray-600 antialiased">
+  <div className="m-0 min-w-full text-gray-600 antialiased">
     <Meta title={AppConfig.title} description={AppConfig.description} />
     <Hero />
     {/* <Sponsors /> */}

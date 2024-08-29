@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import { twMerge } from 'tailwind-merge';
 
 type IBackgroundProps = {
   children: ReactNode;
@@ -6,7 +7,7 @@ type IBackgroundProps = {
 };
 
 const Background = (props: IBackgroundProps) => (
-  <div className={props.color}>{props.children}</div>
+  <div className={twMerge(props.color)}>{props.children}</div>
 );
 
 export { Background };

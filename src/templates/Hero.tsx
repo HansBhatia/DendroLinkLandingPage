@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { Background } from '../background/Background';
@@ -23,20 +24,30 @@ const Hero = () => (
       </NavbarTwoColumns>
     </Section>
 
-    <Section yPadding="pt-20 pb-32">
+    <Section
+      yPadding="pt-20 pb-32 px-6"
+      className="flex min-w-full flex-row items-center justify-around"
+    >
       <HeroOneButton
         title={
           <>
-            {'Meet your\n'}
-            <span className="text-primary-500">Tribe</span>
+            {'Connecting Students,\n'}
+            <span className="text-primary-500">One Event at a Time</span>
           </>
         }
-        description="We facilitate one-on-one/group events for university students."
+        description="Join a community where meaningful connections begin with shared experiences."
         button={
           <Link href="/">
-            <Button xl>Download the App</Button>
+            <Button xl>Join Your University Community Now</Button>
           </Link>
         }
+      />
+      <Image
+        src="/assets/images/hero-image.jpg"
+        alt="Sentry"
+        width={800}
+        height={800}
+        className="rounded"
       />
     </Section>
   </Background>
