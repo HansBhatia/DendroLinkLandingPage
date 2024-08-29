@@ -26,7 +26,7 @@ const Hero = () => (
 
     <Section
       yPadding="pt-20 pb-32 px-6"
-      className="flex min-w-full flex-row items-center justify-around"
+      className="flex min-w-full flex-col items-center justify-around gap-2 md:flex-row"
     >
       <HeroOneButton
         title={
@@ -47,7 +47,7 @@ const Hero = () => (
         alt="Sentry"
         width={800}
         height={800}
-        className="rounded"
+        className="rounded max-md:hidden"
       />
     </Section>
   </Background>
