@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
 import { Background } from '../background/Background';
@@ -10,28 +9,27 @@ import { Logo } from './Logo';
 
 const Hero = () => (
   <Background color="bg-gray-100">
-    <Section yPadding="py-6">
+    <Section yPadding="py-6 w-full">
       <NavbarTwoColumns logo={<Logo xl />}>
-        <></>
-        {/* <li>
+        <li>
           <Link href="https://github.com/ixartz/Next-JS-Landing-Page-Starter-Template">
             GitHub
           </Link>
         </li>
         <li>
           <Link href="/">Sign in</Link>
-        </li> */}
+        </li>
       </NavbarTwoColumns>
     </Section>
 
     <Section
-      yPadding="pt-20 pb-32 px-6"
-      className="flex min-w-full flex-col items-center justify-around gap-2 md:flex-row"
+      yPadding="pt-20 px-6 pb-24"
+      className="md:gap flex max-h-[700px] min-w-full flex-col items-center 2xl:flex-row 2xl:items-start 2xl:justify-around"
     >
       <HeroOneButton
         title={
           <>
-            {'Connecting Students,\n'}
+            {'Connecting Students\n'}
             <span className="text-primary-500">One Event at a Time</span>
           </>
         }
@@ -42,13 +40,13 @@ const Hero = () => (
           </Link>
         }
       />
-      <Image
-        src="/assets/images/hero-image.jpg"
-        alt="Sentry"
-        width={800}
-        height={800}
-        className="rounded max-md:hidden"
-      />
+      <div className="h-full max-w-[40%] flex-1 overflow-hidden rounded">
+        <img
+          src="/assets/images/hero-image.jpg"
+          alt="Sentry"
+          className="box-border size-full rounded object-cover max-2xl:hidden"
+        />
+      </div>
     </Section>
   </Background>
 );

@@ -12,7 +12,7 @@ type ISectionProps = {
 const Section = (props: ISectionProps) => (
   <div
     className={twMerge(
-      `mx-auto max-w-screen-lg px-3 ${props.yPadding ? props.yPadding : 'py-16'}`,
+      `px-20 ${props.yPadding ? props.yPadding : 'py-16'}`,
       props.className,
     )}
   >
